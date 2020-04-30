@@ -12,6 +12,6 @@ RUN set -ex \
     # change apk source repo
     && apk add --no-cache ${PHP_DEPS} \
     && docker-php-source extract \
-    && docker-php-ext-install ${PHP_EXT_OPTS} \
+    && docker-php-ext-install -j$(nproc) ${PHP_EXT_OPTS} \
     && php -m \
     && echo -e "\033[42;37m Build Completed :).\033[0m\n"
