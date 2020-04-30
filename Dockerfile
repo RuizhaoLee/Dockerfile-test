@@ -9,7 +9,6 @@ ENV PHP_EXT_OPTS="bcmath bz2 calendar ctype curl dba dom enchant exif ffi filein
 ##
 RUN set -ex \
     # change apk source repo
-    && sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/' /etc/apk/repositories \
     && docker-php-source extract \
     && docker-php-ext-install ${PHP_EXT_OPTS} \
     && docker-php-ext-enable ${PHP_EXT_OPTS} \
