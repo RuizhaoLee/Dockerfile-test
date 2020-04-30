@@ -15,7 +15,7 @@ RUN set -ex \
     && wget https://libzip.org/download/libzip-1.5.2.tar.gz -O libzip.tar.gz \
     && tar -zxvf libzip.tar.gz \ cmake .. \
     && make && make install \
-    && cd libzip && mkdir build && cd build &&
+    && cd libzip && mkdir build && cd build \
     && docker-php-source extract \
     && docker-php-ext-install -j$(nproc) ${PHP_EXT_OPTS} \
     && php -m \
