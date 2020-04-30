@@ -2,7 +2,7 @@ FROM php:7.4.5-zts-alpine3.11
 
 LABEL maintainer="Liruizhao <liruizhaoatphp@outlook.com>" version="1.0"
 
-ENV PHP_DEPS="curl-dev enchant-dev libpng-dev gmp-dev libc-dev gc-dev"
+ENV PHP_DEPS="curl-dev enchant-dev libpng-dev gmp-dev libc-dev gc-dev imap-dev"
 ENV PHP_EXT_OPTS="bcmath imap intl json ldap mbstring mysqli oci8 odbc pcntl pdo pdo_mysql pdo_pgsql pgsql phar posix pspell shmop snmp soap sockets sysvmsg sysvsem sysvshm tidy zip"
 
 ##
