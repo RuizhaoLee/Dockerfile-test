@@ -14,7 +14,7 @@ RUN set -ex \
     && docker-php-source extract \
     && docker-php-ext-install ${PHP_EXT_OPTS} \
     && docker-php-ext-enable ${PHP_EXT_OPTS} \
-    && rm -rf /var/cache/apk/* /tmp/* /usr/share/man /usr/share/php7 \
+    && rm -rf /var/cache/apk/* /tmp/* /usr/share/man \
     && php -v \
     && php -m \
     && echo -e "\033[42;37m Build Completed :).\033[0m\n"
